@@ -1,0 +1,200 @@
+/* Color variables */
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+/* Font settings */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+body {
+  background-color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  min-height: calc(100vh - 2rem); 
+  margin-top: 2rem;
+}
+
+
+/* Balance Container */
+.balance-container {
+  background-color: var(--soft-red);
+  border-radius: 1rem;
+  width: 27rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.balance-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.balance-text p {
+  margin: 0;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.balance-text h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--cream);
+}
+
+.logo {
+  width: 4rem;
+  height: auto;
+}
+
+
+/* Details Container */
+.details-container {
+  background-color: var(--very-pale-orange);
+  width: 27rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+/* Chart */
+.chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: transparent;
+  width: 100%;
+  height: 15rem; 
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; 
+  width: 10%;
+  height: 100%;
+  position: relative;
+}
+
+.bar {
+  width: 100%;
+  height: 50px; 
+  background-color: var(--soft-red);
+  border-radius: 0.25rem;
+}
+
+.bar:hover {
+  filter: brightness(130%);
+  cursor: pointer;
+}
+
+/* Tooltip styling */
+.tooltip {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); 
+  margin-bottom: 4px;
+  background-color: black;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 1;   
+}
+
+.bar-container:hover .tooltip {
+  opacity: 1;
+}
+
+.bar-label {
+  font-size: 0.8rem;
+  color: var(--medium-brown);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid var(--cream);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.details-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.left-text p, .right-text p {
+  margin: 0;
+  color: var(--medium-brown);
+}
+
+.left-text h3 {
+  margin: 0;
+}
+
+.left-text h3 {
+  font-size: 2.5rem;
+}
+
+.right-text pnum {
+  margin: 0;
+  font-weight: 800;  
+}
+
+
+/* Attribution Container */
+.attribution-container {
+  font-size: 11px;
+  text-align: center;
+  margin: 2rem;
+}
+
+.attribution-container a {
+  color: var(--deep-blue);
+  text-decoration: none;
+}
+
+.attribution-container a:hover {
+  text-decoration: underline;
+}
